@@ -5,7 +5,9 @@ import mongoose from 'mongoose';
 
 
 
+
 const productSchema = new mongoose.Schema({
+
     name: {
         type: String,
         required: [true, 'Product name required to proceed.']
@@ -39,3 +41,7 @@ const productSchema = new mongoose.Schema({
         default: Date.now
     }
 })
+
+const Product = mongoose.model("Product", productSchema);
+
+export default Product;
